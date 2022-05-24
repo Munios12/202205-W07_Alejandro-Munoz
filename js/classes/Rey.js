@@ -14,12 +14,12 @@ export class Rey extends Personaje {
         this.añosDeReinado = añosDeReinado;
     }
 
-    prueba() {
-        console.log("Mi nombre es:", this.nombre);
-        console.log("Mi familia es:", this.familia);
-        console.log("Mi edad es:", this.edad);
-        console.log("Años de reinado:", this.añosDeReinado);
-        console.log("Estoy:", this.estado ? "Vivo" : "Muerto");
-        console.log(this.mensaje);
-    }
+    // prueba() {
+    //     console.log("Mi nombre es:", this.nombre);
+    //     console.log("Mi familia es:", this.familia);
+    //     console.log("Mi edad es:", this.edad);
+    //     console.log("Años de reinado:", this.añosDeReinado);
+    //     console.log("Estoy:", this.estado ? "Vivo" : "Muerto");
+    //     console.log(this.mensaje);
+    // }
 }

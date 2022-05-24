@@ -14,12 +14,12 @@ export class Asesor extends Personaje {
         this.asesora = asesora;
     }
 
-    prueba() {
-        console.log("Mi nombre es:", this.nombre);
-        console.log("Mi familia es:", this.familia);
-        console.log("Mi edad es:", this.edad);
+    // prueba() {
+    //     console.log("Mi nombre es:", this.nombre);
+    //     console.log("Mi familia es:", this.familia);
+    //     console.log("Mi edad es:", this.edad);
 
-        console.log("Estoy:", this.estado ? "Vivo" : "Muerto");
-        console.log(this.mensaje);
-    }
+    //     console.log("Estoy:", this.estado ? "Vivo" : "Muerto");
+    //     console.log(this.mensaje);
+    // }
 }

@@ -16,11 +16,11 @@ export class Luchador extends Personaje {
         this.destrezaArma = destrezaArma;
     }
 
-    prueba() {
-        console.log("Mi nombre es:", this.nombre);
-        console.log("Mi familia es:", this.familia);
-        console.log("Mi edad es:", this.edad);
-        console.log("Estoy:", this.estado ? "Vivo" : "Muerto");
-        console.log(this.mensaje);
-    }
+    // prueba() {
+    //     console.log("Mi nombre es:", this.nombre);
+    //     console.log("Mi familia es:", this.familia);
+    //     console.log("Mi edad es:", this.edad);
+    //     console.log("Estoy:", this.estado ? "Vivo" : "Muerto");
+    //     console.log(this.mensaje);
+    // }
 }
