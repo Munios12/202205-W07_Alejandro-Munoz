@@ -6,20 +6,10 @@ export class Rey extends Personaje {
         nombre,
         familia,
         edad,
-        mensaje = "Vais a morir todos",
-        estado,
-        añosDeReinado
+        añosDeReinado,
+        mensaje = "Vais a morir todos"
     ) {
-        super(nombre, familia, edad, mensaje, estado);
+        super(nombre, familia, edad, mensaje);
         this.añosDeReinado = añosDeReinado;
     }
-
-    // prueba() {
-    //     console.log("Mi nombre es:", this.nombre);
-    //     console.log("Mi familia es:", this.familia);
-    //     console.log("Mi edad es:", this.edad);
-    //     console.log("Años de reinado:", this.añosDeReinado);
-    //     console.log("Estoy:", this.estado ? "Vivo" : "Muerto");
-    //     console.log(this.mensaje);
-    // }
 }

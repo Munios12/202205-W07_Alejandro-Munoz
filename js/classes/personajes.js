@@ -1,45 +1,59 @@
+import { Asesor } from "./Asesor.js";
+import { Luchador } from "./Luchador.js";
+import { Rey } from "./Rey.js";
+import { Escudero } from "./Escudero.js";
+
+const p1 = new Rey("Joffrey Baratheon", "Lannister", 14, 2);
+const p2 = new Luchador("Jaime Lannister", "Lannister", 34, "Espada", 9);
+const p3 = new Luchador("Daenerys Targaryen", "Targaryen", 16, "Espada", 7);
+const p4 = new Asesor(
+    "Tyrion Lannister",
+    "Lannister",
+    27,
+    "Daenerys Targaryen"
+);
+const p5 = new Escudero(
+    "Bronn Stokeworth",
+    "Stokeworth",
+    32,
+    "Jaime Lannister",
+    10
+);
+
 export const personajes = [
     {
-        nombre: "Joffrey Baratheon",
-        familia: "Lannister",
-        edad: 14,
-        añosReinado: 2,
-        img: "./img/joffrey.jpg",
-        role: "rey",
+        rol: p1,
+        atributos: {
+            img: "./img/joffrey.jpg",
+            role: "rey",
+        },
     },
     {
-        nombre: "Jaime Lannister",
-        familia: "Lannister",
-        edad: 34,
-        img: "./img/jaime.jpg",
-        arma: "Espada",
-        destreza: 9,
-        role: "luchador",
+        rol: p2,
+        atributos: {
+            img: "./img/jaime.jpg",
+            role: "luchador",
+        },
     },
     {
-        nombre: "Daenerys Targaryen",
-        familia: "Targaryen",
-        edad: 16,
-        img: "./img/daenerys.jpg",
-        arma: "Espada",
-        destreza: 7,
-        role: "luchador",
+        rol: p3,
+        atributos: {
+            img: "./img/daenerys.jpg",
+            role: "luchador",
+        },
     },
     {
-        nombre: "Tyrion Lannister",
-        familia: "Lannister",
-        edad: 27,
-        img: "./img/tyrion.jpg",
-        asesora: "Daenerys Targaryen",
-        role: "asesor",
+        rol: p4,
+        atributos: {
+            img: "./img/tyrion.jpg",
+            role: "asesor",
+        },
     },
     {
-        nombre: "Bronn",
-        familia: "Stokeworth",
-        edad: 27,
-        img: "./img/bronn.jpg",
-        escuda: "Jaime Lannister",
-        pelotismo: 10,
-        role: "escudero",
+        rol: p5,
+        atributos: {
+            img: "./img/bronn.jpg",
+            role: "escudero",
+        },
     },
 ];

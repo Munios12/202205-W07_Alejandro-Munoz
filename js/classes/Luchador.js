@@ -6,21 +6,12 @@ export class Luchador extends Personaje {
         nombre,
         familia,
         edad,
-        mensaje = "Primero pego y luego pregunto",
-        estado,
         arma,
-        destrezaArma
+        destrezaArma,
+        mensaje = "Primero pego y luego pregunto"
     ) {
-        super(nombre, familia, edad, mensaje, estado);
+        super(nombre, familia, edad, mensaje);
         this.arma = arma;
         this.destrezaArma = destrezaArma;
     }
-
-    // prueba() {
-    //     console.log("Mi nombre es:", this.nombre);
-    //     console.log("Mi familia es:", this.familia);
-    //     console.log("Mi edad es:", this.edad);
-    //     console.log("Estoy:", this.estado ? "Vivo" : "Muerto");
-    //     console.log(this.mensaje);
-    // }
 }

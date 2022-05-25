@@ -6,20 +6,12 @@ export class Escudero extends Personaje {
         nombre,
         familia,
         edad,
-        mensaje = "Soy un loser :(",
-        estado,
-        asesora
+        escuda,
+        peloteo,
+        mensaje = "Soy un loser :("
     ) {
-        super(nombre, familia, edad, mensaje, estado);
-        this.asesora = asesora;
+        super(nombre, familia, edad, mensaje);
+        this.escuda = escuda;
+        this.peloteo = peloteo;
     }
-
-    // prueba() {
-    //     console.log("Mi nombre es:", this.nombre);
-    //     console.log("Mi familia es:", this.familia);
-    //     console.log("Mi edad es:", this.edad);
-
-    //     console.log("Estoy:", this.estado ? "Vivo" : "Muerto");
-    //     console.log(this.mensaje);
-    // }
 }
