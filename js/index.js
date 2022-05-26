@@ -11,9 +11,11 @@ const main = () => {
     const morirBtnsHtml = document.querySelectorAll("#morir");
     const comunicacionesBotones = [...comunicacionesBtnsHtml];
     const matarBotones = [...morirBtnsHtml];
+    const imagenesHtml = document.querySelectorAll(".character__picture");
+    const imagenes = [...imagenesHtml];
     const contenedorDeFraseHtml = document.querySelector(".comunications");
 
-    console.log(matarBotones);
+    console.log(imagenes);
 
     for (let i = 0; i < personajes.length; i++) {
         comunicacionesBotones[i].addEventListener("click", function (e) {
@@ -40,6 +42,7 @@ const main = () => {
             stateSeparado[i].innerHTML = `Estado: ${personajes[
                 i
             ].rol.vivoOMuerto()}`;
+            imagenes[i].style.transform = "rotate(180deg)";
         });
     }
 };
