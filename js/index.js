@@ -7,32 +7,41 @@ const main = () => {
             tarjetaPersonaje(personajes[i]);
     }
 
-    const hablarBtns = document.querySelectorAll("#hablar");
-    const separarBotones = [...hablarBtns];
-    const hola = document.querySelector(".comunications");
-    console.dir(separarBotones);
+    const comunicacionesBtnsHtml = document.querySelectorAll("#hablar");
+    const morirBtnsHtml = document.querySelectorAll("#morir");
+    const comunicacionesBotones = [...comunicacionesBtnsHtml];
+    const matarBotones = [...morirBtnsHtml];
+    const contenedorDeFraseHtml = document.querySelector(".comunications");
+
+    console.log(matarBotones);
 
     for (let i = 0; i < personajes.length; i++) {
-        separarBotones[i].addEventListener("click", function (e) {
+        comunicacionesBotones[i].addEventListener("click", function (e) {
             e.preventDefault();
-            hola.innerHTML += comunicarHtml(personajes[i]);
-            hola.classList.add("on");
+            contenedorDeFraseHtml.innerHTML = comunicarHtml(personajes[i]);
+            contenedorDeFraseHtml.classList.add("on");
+            setTimeout(() => {
+                if (contenedorDeFraseHtml.classList.contains("on")) {
+                    contenedorDeFraseHtml.classList.remove("on");
+                }
+            }, 2000);
         });
     }
 
-    //Antigua forma de mostrar las tarjetas
-    // let tarjetaPersonaje1 = ;
-    // let tarjetaPersonaje2 = tarjetaPersonaje(personajes[1]);
-    // let tarjetaPersonaje3 = tarjetaPersonaje(personajes[2]);
-    // let tarjetaPersonaje4 = tarjetaPersonaje(personajes[3]);
-    // let tarjetaPersonaje5 = tarjetaPersonaje(personajes[4]);
+    let state = document.querySelectorAll(".character__state");
 
-    // document.querySelector(".characters-list").innerHTML =
-    //     tarjetaPersonaje1 +
-    //     tarjetaPersonaje2 +
-    //     tarjetaPersonaje3 +
-    //     tarjetaPersonaje4 +
-    //     tarjetaPersonaje5;
+    let stateSeparado = [...state];
+
+    for (let i = 0; i < personajes.length; i++) {
+        matarBotones[i].addEventListener("click", function (e) {
+            e.preventDefault();
+            personajes[i].rol.morir();
+            stateSeparado[i].innerHTML = "";
+            stateSeparado[i].innerHTML = `Estado: ${personajes[
+                i
+            ].rol.vivoOMuerto()}`;
+        });
+    }
 };
 
 main();

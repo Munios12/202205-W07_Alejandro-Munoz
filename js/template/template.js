@@ -9,15 +9,17 @@ export const tarjetaPersonaje = ({ ...personaje }) => {
                             />
                             <div class="card-body">
                                 <h2 class="character__name card-title h4">
-                                    ${personaje.rol.nombre}, ${personaje.rol.familia}
+                                    ${personaje.rol.nombre}, ${
+        personaje.rol.familia
+    }
                                 </h2>
                                 <div class="character__info">
                                     <ul class="list-unstyled">
                                         <li>Edad:${personaje.rol.edad}</li>
-                                        <li>
-                                            Estado:
-                                            <i class="fas fa-thumbs-down"></i>
-                                            <i class="fas fa-thumbs-up"></i>
+                                        <li class='character__state'>
+                                            Estado: ${personaje.rol.vivoOMuerto()}`;
+
+    tarjetaPersonajeHtml += `
                                         </li>
                                     </ul>
                                 </div>

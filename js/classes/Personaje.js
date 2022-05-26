@@ -1,14 +1,22 @@
 export class Personaje {
-    constructor(nombre, familia, edad, mensaje, estado = true) {
+    estaVivo = true;
+    constructor(nombre, familia, edad, mensaje) {
         this.nombre = nombre;
         this.familia = familia;
         this.edad = edad;
         this.mensaje = mensaje;
-        this.estado = estado;
+    }
+
+    vivoOMuerto() {
+        if (this.estaVivo) {
+            return '<i class="fas fa-thumbs-up"></i>';
+        } else {
+            return '<i class="fas fa-thumbs-down"></i>';
+        }
     }
 
     morir() {
-        this.estado = false;
+        this.estaVivo = false;
     }
 
     hablar() {
